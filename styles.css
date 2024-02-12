@@ -4,15 +4,16 @@
 
 body {
     background-color: rgb(88, 174, 245);
+    
 }
 
-#title-lgreen {
+#title-green {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#title-lgreen p {
+#title-green p {
     position: absolute;
     text-align: center;
     font-size: 34px;
@@ -23,7 +24,7 @@ body {
     width: 300px;
     height: 35px;    
     padding: 15px;
-    margin-top: 110px;
+    margin-top: 120px;
     z-index: 2;
 }
 
@@ -35,7 +36,27 @@ body {
     width: 300px;
     height: 35px;    
     padding: 15px;
-    margin-top: 110px;
+    margin-top: 120px;
     transform: translateX(5%);
     z-index: 1;
+}
+
+#sketch-pad {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#red-container {
+    width: 900px;
+    height: 540px;
+    background-color: rgb(219, 91, 91);
+    border-radius: 60px;
+    border: 5px solid rgb(218, 109, 109);
+    box-shadow: 20px 20px 0px rgb(87, 0, 0); 
+    transform: translateY(21%) translateX(25%);
+}
+
+#yellow-container {
+    
 }
