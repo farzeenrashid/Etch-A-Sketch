@@ -58,5 +58,10 @@ body {
 }
 
 #yellow-container {
-    
+    width: 815px;
+    height: 470px;
+    border-radius: 10px;
+    background-color: rgb(230, 219, 73);
+    border: 5px solid rgb(241, 226, 14);
+    transform: translateY(6.5%) translateX(5%);
 }
