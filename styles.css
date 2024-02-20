@@ -4,86 +4,76 @@
 
 body {
     background-color: rgb(88, 174, 245);
-    
-}
-
-#title-green {
     display: flex;
-    justify-content: center;
+    justify-content:center;
     align-items: center;
 }
 
-#title-green p {
+#title-lgreen {
     position: absolute;
-    text-align: center;
-    font-size: 34px;
-    font-family: 'Minecraft', sans-serif;
-    font-weight: bold;
     background-color: hsl(120, 46%, 46%);
     border: 5px solid rgb(50, 146, 50);
     width: 300px;
     height: 35px;    
     padding: 15px;
-    margin-top: 120px;
+    transform: translateX(-170%) translateY(-375%);
     z-index: 2;
+}
+
+#title-lgreen p {
+    position: absolute;
+    text-align: center;
+    font-size: 34px;
+    font-family: 'Minecraft', sans-serif;
+    font-weight: bold;
+    transform: translateY(-80%);
 }
 
 #title-dgreen {
     position: absolute;
-    text-align: center;
-    font-size: 30px;
     background-color: rgb(0, 61, 5);
     width: 300px;
     height: 35px;    
     padding: 15px;
-    margin-top: 120px;
-    transform: translateX(5%);
+    transform: translateX(-170%) translateY(-405%);
     z-index: 1;
 }
 
-#sketch-pad {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 #red-container {
-    width: 900px;
-    height: 540px;
+    width: 1100px;
+    height: 650px;
     background-color: rgb(219, 91, 91);
     border-radius: 60px;
     border: 5px solid rgb(218, 109, 109);
     box-shadow: 20px 20px 0px rgb(87, 0, 0); 
-    /* transform: translateY(21%) translateX(25%); */
-    transform: translateY(21%) translateX(0%);
+    transform: translateY(1.5%) translateX(16%);
 }
 
 #yellow-container {
-    width: 815px;
-    height: 430px;
+    width: 1015px;
+    height: 541.7px;
     border-radius: 10px;
     background-color: rgb(230, 219, 73);
     border: 5px solid rgb(241, 226, 14);
-    transform: translateY(6.5%) translateX(5%);
+    transform: translateY(5%) translateX(4%);
 }
 
 #slider-red {
-    width: 800px;
+    width: 1000px;
     height: 45px;
     background-color: rgb(146, 30, 30);
-    transform: translateY(135%) translateX(6.5%);
+    transform: translateY(132%) translateX(5.5%);
 }
 
 #slider-dyellow {
-    background-color: rgb(170, 161, 27);
+    background-color: rgb(194, 165, 2);
     width: 100px;
     height: 45px;
 }
 
 #slider-lyellow {
     background-color: rgb(230, 219, 73);
-    border: 5px solid rgb(241, 226, 14);
-    width: 20px;
-    height: 35px;
+    width: 30px;
+    height: 45px;
     transform: translateX(120%);
 }
