@@ -58,6 +58,13 @@ body {
     transform: translateY(5%) translateX(4%);
 }
 
+#yellow-container p {
+    position: absolute;
+    font-family: 'Minecraft', sans-serif;
+    font-size: 30px;
+    transform: translateX(168%) translateY(-10%);
+}
+
 #slider-red {
     width: 1000px;
     height: 45px;
