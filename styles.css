@@ -77,3 +77,11 @@ body {
     height: 45px;
     transform: translateX(120%);
 }
+
+#white-container {
+    width: 950px;
+    height: 485px;
+    border-radius: 10px;
+    background-color: white;
+    transform: translateY(5.7%) translateX(3.5%);
+}
