@@ -5,20 +5,26 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styles.css">
+        <script src="etch-a-sketch.js"></script>
         <title>Etch-A-Sketch</title>
-        <link href="https://fonts.cdnfonts.com/css/minecraft-3" rel="stylesheet">                                                       
+        <link href="https://fonts.cdnfonts.com/css/minecraft-3" rel="stylesheet">         
+        <link href="https://fonts.cdnfonts.com/css/noto-sans-georgian" rel="stylesheet">                                              
     </head>
 
     <body>
-        <div id="title-lgreen">
-            <p>Etch-A-Sketch</p>
-        </div>                
-        <div id="title-dgreen"></div>
+        <div class="left-side">
+            <div id="title-lgreen">
+                <p>Etch-A-Sketch</p>
+            </div>                
+            <div id="title-dgreen"></div>
+            <button id="shake-button">Shake</button>
+        </div>
 
-        <div id="sketch-pad">
-            <div id="red-container">
+        <div class="sketch-pad">
+            <div id="red-container" class="shake-animation">
                 <div id="yellow-container">
-                    <div id="white-container"></div>
+                    <div class="white-container">
+                    </div>
                     <p>Made by Farzeen Rashid</p>
                 </div>
                 <div id="slider-red">
