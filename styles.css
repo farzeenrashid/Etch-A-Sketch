@@ -17,7 +17,7 @@ body {
     width: 300px;
     height: 35px;    
     padding: 15px;
-    transform: translateX(-55%) translateY(-430%);
+    transform: translateX(-40%) translateY(-375%);
     z-index: 2;
 }
 
@@ -36,7 +36,7 @@ body {
     width: 300px;
     height: 35px;    
     padding: 15px;
-    transform: translateX(-51%) translateY(-465%);
+    transform: translateX(-35%) translateY(-400%);
     z-index: 1;
 }
 
@@ -47,7 +47,7 @@ body {
     border-radius: 60px;
     border: 5px solid rgb(218, 109, 109);
     box-shadow: 20px 20px 0px rgb(87, 0, 0); 
-    transform: translateY(1.5%) translateX(16%);
+    transform: translateY(2.5%) translateX(10%);
     animation: spinAndScale 2s ease-in-out; 
 }
 
@@ -113,8 +113,8 @@ body {
 }
 
 @keyframes spinAndScale {
-    0% { transform: scale(0) rotate(0deg) translateY(1.5%) translateX(16%); }
-    100% { transform: scale(1) rotate(720deg) translateY(1.5%) translateX(16%); }
+    0% { transform: scale(0) rotate(0deg) translateY(2.5%) translateX(10%); }
+    100% { transform: scale(1) rotate(720deg) translateY(2.5%) translateX(10%); }
   }
 
 .shake {
