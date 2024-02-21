@@ -74,10 +74,12 @@ body {
     transform: translateY(132%) translateX(5.5%);
 }
 
-#slider-dyellow {
+.slider-dyellow {
+    position: relative;
     background-color: rgb(194, 165, 2);
     width: 100px;
     height: 45px;
+    cursor: move;
 }
 
 #slider-lyellow {
