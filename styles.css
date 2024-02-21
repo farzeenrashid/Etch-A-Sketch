@@ -104,7 +104,7 @@ body {
     transform: translateY(5.7%) translateX(3.5%);
     display: grid;
     grid-template-columns: repeat(10, auto);
-    grid-template-rows: repeat(5, auto);
+    grid-template-rows: repeat(5.10526316, auto);
 }
 
 #shake-button {
