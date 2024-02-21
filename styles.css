@@ -64,7 +64,7 @@ body {
     position: absolute;
     font-family: 'Minecraft', sans-serif;
     font-size: 30px;
-    transform: translateX(168%) translateY(-10%);
+    transform: translateX(168%) translateY(-5%);
 }
 
 #slider-red {
@@ -85,18 +85,26 @@ body {
     width: 30px;
     height: 45px;
     transform: translateX(120%);
+
 }
 
-.white-container {
-    display: flex;
-    flex-wrap: wrap;
-    box-sizing: border-box;
+.cell {
+    background-color: white; 
+    border: 1px solid #aaa; 
+    width: calc(100%); 
+    height: calc(100%);
+  }
+  
 
+#white-container {
     width: 950px;
     height: 485px;
     border-radius: 10px;
     background-color: white;
     transform: translateY(5.7%) translateX(3.5%);
+    display: grid;
+    grid-template-columns: repeat(10, auto);
+    grid-template-rows: repeat(5, auto);
 }
 
 #shake-button {
