@@ -74,7 +74,7 @@ body {
     transform: translateY(132%) translateX(5.5%);
 }
 
-.slider-dyellow {
+#slider-dyellow {
     position: relative;
     background-color: rgb(194, 165, 2);
     width: 100px;
@@ -87,7 +87,6 @@ body {
     width: 30px;
     height: 45px;
     transform: translateX(120%);
-
 }
 
 .cell {
@@ -97,7 +96,6 @@ body {
     height: calc(100%);
   }
   
-
 #white-container {
     width: 950px;
     height: 485px;
