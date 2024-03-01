@@ -2,6 +2,8 @@ document.addEventListener('DOMContentLoaded', function() {
   const shakeButton = document.querySelector('#left-side #shake-button');
   const eraserButton = document.querySelector('#left-side #eraser');
   const rainbowButton = document.querySelector('#left-side #rainbow');
+  const warmButton = document.querySelector('#left-side #warm');
+  const coldButton = document.querySelector('#left-side #cold');
   const penColorInput = document.querySelector('#pen-color');
   const sketchPad = document.querySelector('#sketch-pad');
 
@@ -33,6 +35,16 @@ document.addEventListener('DOMContentLoaded', function() {
     toggleButtonStyles();
   });
 
+  warmButton.addEventListener('click', function() {
+    currentMode = 'warm';
+    toggleButtonStyles();
+  });
+
+  coldButton.addEventListener('click', function() {
+    currentMode = 'cold';
+    toggleButtonStyles();
+  });
+
   penColorInput.addEventListener('input', function() {
     currentMode = 'pen';
     toggleButtonStyles();
@@ -41,6 +53,8 @@ document.addEventListener('DOMContentLoaded', function() {
   function toggleButtonStyles() {
     eraserButton.classList.toggle('active', currentMode === 'eraser');
     rainbowButton.classList.toggle('active', currentMode === 'rainbow');
+    warmButton.classList.toggle('active', currentMode === 'warm');
+    coldButton.classList.toggle('active', currentMode === 'cold');
     penColorInput.classList.toggle('active', currentMode === 'pen');
   }
 
@@ -53,6 +67,32 @@ document.addEventListener('DOMContentLoaded', function() {
     return color;
   }
 
+  function getWarmColor() {
+    const letters = 
+    ["ff2d00", "ff8267", "ff3d09", "ff5000", "b93b01", 
+    "ff8f5c", "ff0000", "b03737", "bf2900", "d71d02", 
+    "ff7c00", "ffad60", "ff8300", "ff9c00", "ffc872",
+    "ff5700", "ffbd00", "ffcb38", "dea400", "faeb00",
+    "ffde00", "fff29d", "efd227", "ff7800", "ff7800",
+    "#FFC300", "FF5733", "fadc2c", "ffc0a8", "f2cf00"];
+    let color = "#";
+    color += letters[Math.floor(Math.random() * 30)];
+    return color;
+  }
+
+  function getColdColor() {
+    const letters = 
+    ["00fff2", "81fff9", "33d0c8", "00d3c9", "00ebff", 
+    "00c6d7", "58edfa", "00d5ff", "00b2d5", "7fdbed", 
+    "009fff", "009fff", "278fce", "0189ff", "75bfff",
+    "1074ca", "046bff", "0053cc", "669ceb", "0047ff",
+    "2d61e7", "819feb", "0027ff", "001fce", "374dc5",
+    "1000ff", "8d86ff", "716bce", "3a2fdc", "150ab1"];
+    let color = "#";
+    color += letters[Math.floor(Math.random() * 30)];
+    return color;
+  }
+
   function handleMouseDown(event) {
     isMouseDown = true;
     if (event.target.classList.contains("cell")) {
@@ -60,6 +100,10 @@ document.addEventListener('DOMContentLoaded', function() {
         event.target.style.backgroundColor = '';
       } else if (currentMode === 'rainbow') {
         event.target.style.backgroundColor = getRandomColor();
+      } else if (currentMode === 'warm') {
+        event.target.style.backgroundColor = getWarmColor();
+      } else if (currentMode === 'cold') {
+        event.target.style.backgroundColor = getColdColor();
       } else if (currentMode === 'pen') {
         event.target.style.backgroundColor = penColorInput.value;
       }
@@ -73,6 +117,10 @@ document.addEventListener('DOMContentLoaded', function() {
           event.target.style.backgroundColor = '';
         } else if (currentMode === 'rainbow') {
           event.target.style.backgroundColor = getRandomColor();
+        } else if (currentMode === 'warm') {
+          event.target.style.backgroundColor = getWarmColor();
+        } else if (currentMode === 'cold') {
+          event.target.style.backgroundColor = getColdColor();
         } else if (currentMode === 'pen') {
           event.target.style.backgroundColor = penColorInput.value;
         }
