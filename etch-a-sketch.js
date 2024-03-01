@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const penColorInput = document.querySelector('#pen-color');
   const sketchPad = document.querySelector('#sketch-pad');
 
-  let currentMode = 'pen'; // Default mode is pen
+  let currentMode = 'pen'; 
   let isMouseDown = false;
 
   shakeButton.addEventListener('click', function() {
@@ -14,6 +14,14 @@ document.addEventListener('DOMContentLoaded', function() {
       sketchPad.classList.remove('shake');
     });
   });
+
+  function clearGrid() {
+    const cells = document.querySelectorAll(".cell");
+    cells.forEach(function(cell) {
+      cell.style.backgroundColor = "";
+    });
+  }
+  shakeButton.addEventListener("click", clearGrid); 
 
   eraserButton.addEventListener('click', function() {
     currentMode = 'eraser';
@@ -35,14 +43,6 @@ document.addEventListener('DOMContentLoaded', function() {
     rainbowButton.classList.toggle('active', currentMode === 'rainbow');
     penColorInput.classList.toggle('active', currentMode === 'pen');
   }
-
-  function clearGrid() {
-    const cells = document.querySelectorAll(".cell");
-    cells.forEach(function(cell) {
-      cell.style.backgroundColor = "";
-    });
-  }
-  shakeButton.addEventListener("click", clearGrid); 
 
   function getRandomColor() {
     const letters = "0123456789ABCDEF";
