@@ -1,14 +1,28 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const shakeButton = document.querySelector('#left-side #shake-button');
-    const sketchPad = document.querySelector('#sketch-pad');
+  const shakeButton = document.querySelector('#left-side #shake-button');
+  const sketchPad = document.querySelector('#sketch-pad');
 
-    shakeButton.addEventListener('click', function() {
-        sketchPad.classList.add('shake');
-        sketchPad.addEventListener('animationend', function() {
+  shakeButton.addEventListener('click', function() {
+    sketchPad.classList.add('shake');
+      sketchPad.addEventListener('animationend', function() {
         sketchPad.classList.remove('shake');
-        });
-    });
+      });
+  });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  const shakeButton = document.querySelector('#left-side #shake-button');
+
+  function clearGrid() {
+    const cells = document.querySelectorAll(".cell");
+    cells.forEach(function(cell) {
+      cell.style.backgroundColor = "";
+    });
+  }
+  
+  shakeButton.addEventListener("click", clearGrid); 
+});
+
 
 document.addEventListener("DOMContentLoaded", function() {
   const gridContainer = document.getElementById("white-container");
