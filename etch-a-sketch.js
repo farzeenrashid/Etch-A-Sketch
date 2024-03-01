@@ -1,17 +1,40 @@
 document.addEventListener('DOMContentLoaded', function() {
   const shakeButton = document.querySelector('#left-side #shake-button');
+  const eraserButton = document.querySelector('#left-side #eraser');
+  const rainbowButton = document.querySelector('#left-side #rainbow');
+  const penColorInput = document.querySelector('#pen-color');
   const sketchPad = document.querySelector('#sketch-pad');
+
+  let currentMode = 'pen'; // Default mode is pen
+  let isMouseDown = false;
 
   shakeButton.addEventListener('click', function() {
     sketchPad.classList.add('shake');
-      sketchPad.addEventListener('animationend', function() {
-        sketchPad.classList.remove('shake');
-      });
+    sketchPad.addEventListener('animationend', function() {
+      sketchPad.classList.remove('shake');
+    });
   });
-});
 
-document.addEventListener('DOMContentLoaded', function() {
-  const shakeButton = document.querySelector('#left-side #shake-button');
+  eraserButton.addEventListener('click', function() {
+    currentMode = 'eraser';
+    toggleButtonStyles();
+  });
+
+  rainbowButton.addEventListener('click', function() {
+    currentMode = 'rainbow';
+    toggleButtonStyles();
+  });
+
+  penColorInput.addEventListener('input', function() {
+    currentMode = 'pen';
+    toggleButtonStyles();
+  });
+
+  function toggleButtonStyles() {
+    eraserButton.classList.toggle('active', currentMode === 'eraser');
+    rainbowButton.classList.toggle('active', currentMode === 'rainbow');
+    penColorInput.classList.toggle('active', currentMode === 'pen');
+  }
 
   function clearGrid() {
     const cells = document.querySelectorAll(".cell");
@@ -19,39 +42,45 @@ document.addEventListener('DOMContentLoaded', function() {
       cell.style.backgroundColor = "";
     });
   }
-  
   shakeButton.addEventListener("click", clearGrid); 
-});
-
-
-document.addEventListener("DOMContentLoaded", function() {
-  const gridContainer = document.getElementById("white-container");
 
   function getRandomColor() {
-      const letters = "0123456789ABCDEF";
-      let color = "#";
-      for (let i = 0; i < 6; i++) {
-          color += letters[Math.floor(Math.random() * 16)];
-      }
-      return color;
+    const letters = "0123456789ABCDEF";
+    let color = "#";
+    for (let i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
   }
 
   function handleMouseDown(event) {
     isMouseDown = true;
     if (event.target.classList.contains("cell")) {
-      event.target.style.backgroundColor = getRandomColor();
+      if (currentMode === 'eraser') {
+        event.target.style.backgroundColor = '';
+      } else if (currentMode === 'rainbow') {
+        event.target.style.backgroundColor = getRandomColor();
+      } else if (currentMode === 'pen') {
+        event.target.style.backgroundColor = penColorInput.value;
+      }
     }
   }
 
   function handleMouseOver(event) {
     if (event.target.classList.contains("cell")) {
       if (isMouseDown) {
-            event.target.style.backgroundColor = getRandomColor();
+        if (currentMode === 'eraser') {
+          event.target.style.backgroundColor = '';
+        } else if (currentMode === 'rainbow') {
+          event.target.style.backgroundColor = getRandomColor();
+        } else if (currentMode === 'pen') {
+          event.target.style.backgroundColor = penColorInput.value;
+        }
       }
     }
   }
 
-  function handleMouseUp(event) {
+  function handleMouseUp() {
     isMouseDown = false;
   }
 
@@ -59,24 +88,15 @@ document.addEventListener("DOMContentLoaded", function() {
   document.addEventListener("mouseover", handleMouseOver);
   document.addEventListener("mouseup", handleMouseUp);
 
-
+  const gridContainer = document.getElementById("white-container");
   for (let i = 0; i < 5; i++) {
-      for (let j = 0; j < 10; j++) {
-          const cell = document.createElement("div");
-          cell.classList.add("cell");
-          gridContainer.appendChild(cell);
-      }
-  }
-
-  function handleMouseOutside(event) {
-    isMouseDown = true;
-    if (event.target.classList.contains("cell")) {
-      event.target.style.backgroundColor = getRandomColor();
+    for (let j = 0; j < 10; j++) {
+      const cell = document.createElement("div");
+      cell.classList.add("cell");
+      gridContainer.appendChild(cell);
     }
   }
-
 });
-
 
 document.addEventListener("DOMContentLoaded", function() {
   const draggable = document.getElementById('slider-dyellow');
