@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
     "ff7c00", "ffad60", "ff8300", "ff9c00", "ffc872",
     "ff5700", "ffbd00", "ffcb38", "dea400", "faeb00",
     "ffde00", "fff29d", "efd227", "ff7800", "ff7800",
-    "#FFC300", "FF5733", "fadc2c", "ffc0a8", "f2cf00"];
+    "ffc300", "ff5733", "fadc2c", "ffc0a8", "f2cf00"];
     let color = "#";
     color += letters[Math.floor(Math.random() * 30)];
     return color;
