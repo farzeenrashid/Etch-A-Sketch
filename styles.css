@@ -105,6 +105,7 @@ body {
     display: grid;
     grid-template-columns: repeat(10, auto);
     grid-template-rows: repeat(5, auto);
+    cursor: crosshair;
 }
 
 #shake-button {
