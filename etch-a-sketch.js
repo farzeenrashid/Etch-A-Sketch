@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const warmButton = document.querySelector('#left-side #warm');
   const coldButton = document.querySelector('#left-side #cold');
   const penColorInput = document.querySelector('#pen-color');
+  const canvasColorInput = document.querySelector('#canvas-color');
   const sketchPad = document.querySelector('#sketch-pad');
 
   let currentMode = 'pen'; 
@@ -24,6 +25,13 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
   shakeButton.addEventListener("click", clearGrid); 
+
+  canvasColorInput.addEventListener('input', function() {
+    const cells = document.querySelectorAll(".cell");
+    cells.forEach(function(cell) {
+      cell.style.backgroundColor = canvasColorInput.value;;
+    });
+  });
 
   eraserButton.addEventListener('click', function() {
     currentMode = 'eraser';
