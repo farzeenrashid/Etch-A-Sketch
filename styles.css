@@ -281,4 +281,18 @@ label[for="pen-color"] {
     75% { transform: translateX(0%) translateY(0%) scale(0.92); }
     87.5% { transform: translateX(5%) translateY(-5%) scale(0.92); }
     100% { transform: translateX(0%) translateY(0%) scale(0.92); }
-  }
+}
+
+@keyframes appear {
+    0% {opacity: 0;}
+    25% {opacity: 0;}
+    50% {opacity: 0;}
+    70% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+#title-lgreen, #title-lgreen p, #title-dgreen, #shake-button, #erase, #rainbow, 
+#warm, #cold, #pen-color, #canvas-color, #grid-color, 
+#grid-on-off, label, #eraser {
+    animation: appear 3s ease-in-out;
+}
