@@ -10,14 +10,18 @@ body {
     height: 90vh;
 }
 
+#sketch-pad {
+    transform: scale(0.92);
+}
+
 #title-lgreen {
     position: absolute;
     background-color: hsl(120, 46%, 46%);
     border: 5px solid rgb(50, 146, 50);
-    width: 300px;
+    width: 280px;
     height: 35px;    
     padding: 15px;
-    transform: translateX(-40%) translateY(-375%);
+    transform: translateX(-43%) translateY(-380%);
     z-index: 2;
 }
 
@@ -33,10 +37,10 @@ body {
 #title-dgreen {
     position: absolute;
     background-color: rgb(0, 61, 5);
-    width: 300px;
+    width: 280px;
     height: 35px;    
     padding: 15px;
-    transform: translateX(-35%) translateY(-400%);
+    transform: translateX(-38%) translateY(-405%);
     z-index: 1;
 }
 
@@ -47,7 +51,7 @@ body {
     border-radius: 60px;
     border: 5px solid rgb(218, 109, 109);
     box-shadow: 20px 20px 0px rgb(87, 0, 0); 
-    transform: translateY(2.5%) translateX(10%);
+    transform: translateY(2.5%) translateX(15.5%);
     animation: spinAndScale 2s ease-in-out; 
 }
 
@@ -109,88 +113,102 @@ body {
 }
 
 #shake-button {
+    position: absolute;
     background-color: black;
     color: white;
     font-family: 'Friday October Twelve', sans-serif;
-    font-size: 30px;
+    font-size: 20px;
     border: 2px solid black;
     border-radius: 5px;
     text-align: center;
-    width: 180px;
-    height: 70px;
+    width: 120px;
+    height: 60px;
     cursor: pointer;
+    transform: translateX(-100%) translateY(390%);
 }
 
 #pen-color {
+    position: absolute;
     background-color: white;
     border: 2px solid white;
     border-radius: 5px;
-    width: 180px;
-    height: 70px;
+    width: 120px;
+    height: 60px;
     cursor: pointer;
+    transform: translateX(-100%) translateY(-260%);
 }
 
 #left-side label {
-    color: white;
+    position: absolute;
     font-family: 'Friday October Twelve', sans-serif;
-    font-size: 30px;
+    font-size: 20px;
+    color: black;
     text-align: center;
+    transform: translateX(-105%) translateY(-710%);
 }
 
 #rainbow {
+    position: absolute;
     background-image: linear-gradient(to bottom right, rgb(253, 77, 77), rgb(255, 193, 78), rgb(255, 255, 115), rgb(125, 233, 125), rgb(99, 206, 238), rgb(193, 91, 233));
     color: black;
     font-family: 'Friday October Twelve', sans-serif;
-    font-size: 30px;
+    font-size: 20px;
     border: 2px solid white;
     border-radius: 5px;
     text-align: center;
-    width: 180px;
-    height: 70px;
+    width: 120px;
+    height: 60px;
     cursor: pointer;
+    transform: translateX(-100%) translateY(-130%);
 }
 
 #warm {
+    position: absolute;
     background-image: linear-gradient(to bottom right, rgb(209, 0, 0), rgb(255, 86, 64), rgb(255, 153, 0), rgb(255, 187, 0), rgb(255, 255, 0), rgb(255, 255, 0));
     color: black;
     font-family: 'Friday October Twelve', sans-serif;
-    font-size: 30px;
+    font-size: 20px;
     border: 2px solid white;
     border-radius: 5px;
     text-align: center;
-    width: 180px;
-    height: 70px;
+    width: 120px;
+    height: 60px;
     cursor: pointer;
+    transform: translateX(-100%) translateY(130%);
 }
 
 #cold {
+    position: absolute;
     background-image: linear-gradient(to bottom right, rgb(39, 255, 255), rgb(31, 203, 255), rgb(75, 168, 255), rgb(28, 119, 255), rgb(31, 64, 255), rgb(0, 3, 180));
     color: black;
     font-family: 'Friday October Twelve', sans-serif;
-    font-size: 30px;
+    font-size: 20px;
     border: 2px solid white;
     border-radius: 5px;
     text-align: center;
-    width: 180px;
-    height: 70px;
+    width: 120px;
+    height: 60px;
     cursor: pointer;
+    transform: translateX(-100%) translateY(0%);
 }
 
 #eraser {
+    position: absolute;
     background-color: white;
     font-family: 'Friday October Twelve', sans-serif;
-    font-size: 30px;
+    font-size: 20px;
     border: 2px solid white;
     border-radius: 5px;
     text-align: center;
-    width: 180px;
-    height: 70px;
+    width: 120px;
+    height: 60px;
     cursor: pointer;
+    transform: translateX(-100%) translateY(260%);
 }
 
 @keyframes spinAndScale {
-    0% { transform: scale(0) rotate(0deg) translateY(2.5%) translateX(10%); }
-    100% { transform: scale(1) rotate(720deg) translateY(2.5%) translateX(10%); }
+    0% { transform: scale(0) rotate(0deg) translateY(2.5%) translateX(15.5%); }
+    100% { transform: scale(1) rotate(720deg) translateY(2.5%) translateX(15.5%); }
   }
 
 .shake {
@@ -198,13 +216,13 @@ body {
 }
 
 @keyframes shake {
-    0% { transform: translateX(0%) translateY(0%); }
-    12.5% { transform: translateX(5%) translateY(5%); }
-    25% { transform: translateX(0%) translateY(0%); }
-    37.5% { transform: translateX(-5%) translateY(-5%); }
-    50% { transform: translateX(0%) translateY(0%); }
-    62.5% { transform: translateX(-5%) translateY(5%); }
-    75% { transform: translateX(0%) translateY(0%); }
-    87.5% { transform: translateX(5%) translateY(-5%); }
-    100% { transform: translateX(0%) translateY(0%); }
+    0% { transform: translateX(0%) translateY(0%) scale(0.92); }
+    12.5% { transform: translateX(5%) translateY(5%) scale(0.92); }
+    25% { transform: translateX(0%) translateY(0%) scale(0.92); }
+    37.5% { transform: translateX(-5%) translateY(-5%) scale(0.92); }
+    50% { transform: translateX(0%) translateY(0%) scale(0.92); }
+    62.5% { transform: translateX(-5%) translateY(5%) scale(0.92); }
+    75% { transform: translateX(0%) translateY(0%) scale(0.92); }
+    87.5% { transform: translateX(5%) translateY(-5%) scale(0.92); }
+    100% { transform: translateX(0%) translateY(0%) scale(0.92); }
   }
