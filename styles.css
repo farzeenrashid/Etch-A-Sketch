@@ -110,12 +110,6 @@ body {
     cursor: crosshair;
 }
 
-#grid-on-off {
-    transform: scale(3);
-    position: absolute;
-    cursor: pointer;
-}
-
 #shake-button {
     position: absolute;
     background-color: black;
@@ -131,6 +125,56 @@ body {
     transform: translateX(-100%) translateY(390%);
 }
 
+#canvas-color {
+    cursor: pointer;
+    position: absolute;
+    background-color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+    width: 120px;
+    height: 60px;
+    transform: translateX(55%) translateY(-140%);
+    z-index: 2;
+
+}
+
+label[for="canvas-color"] {
+    position: absolute;
+    font-family: 'Friday October Twelve', sans-serif;
+    font-size: 20px;
+    color: black;
+    text-align: center;
+    transform: translateX(25%) translateY(-435%);
+}
+
+#grid-on-off {
+    transform: scale(3) translateX(73%) translateY(117%);
+    position: absolute;
+    cursor: pointer;
+    z-index: 2;
+}
+
+#grid-color {
+    position: absolute;
+    background-color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+    width: 120px;
+    height: 60px;
+    cursor: pointer;
+    transform: translateX(55%) translateY(50%);
+    z-index: 2;
+}
+
+label[for="grid-color"] {
+    position: absolute;
+    font-family: 'Friday October Twelve', sans-serif;
+    font-size: 20px;
+    color: black;
+    text-align: center;
+    transform: translateX(62%) translateY(0%);
+}
+
 #pen-color {
     position: absolute;
     background-color: white;
@@ -142,7 +186,7 @@ body {
     transform: translateX(-100%) translateY(-260%);
 }
 
-#left-side label {
+label[for="pen-color"] {
     position: absolute;
     font-family: 'Friday October Twelve', sans-serif;
     font-size: 20px;
