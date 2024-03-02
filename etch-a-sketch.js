@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const coldButton = document.querySelector('#left-side #cold');
   const penColorInput = document.querySelector('#pen-color');
   const canvasColorInput = document.querySelector('#canvas-color');
+  const gridColorInput = document.querySelector('#grid-color');
   const sketchPad = document.querySelector('#sketch-pad');
 
   let currentMode = 'pen'; 
@@ -27,9 +28,14 @@ document.addEventListener('DOMContentLoaded', function() {
   shakeButton.addEventListener("click", clearGrid); 
 
   canvasColorInput.addEventListener('input', function() {
+    const whiteContainer = document.querySelector('#white-container');
+    whiteContainer.style.backgroundColor = canvasColorInput.value;
+  });
+
+  gridColorInput.addEventListener('input', function() {
     const cells = document.querySelectorAll(".cell");
     cells.forEach(function(cell) {
-      cell.style.backgroundColor = canvasColorInput.value;;
+      cell.style.borderColor = gridColorInput.value;;
     });
   });
 

@@ -94,8 +94,7 @@ body {
 }
 
 .cell {
-    background-color: white; 
-    border: 1px solid #aaa; 
+    border: 1px solid #aaaaaa; 
     width: calc(100%); 
     height: calc(100%);
   }
@@ -103,7 +102,6 @@ body {
 #white-container {
     width: 950px;
     height: 485px;
-    border-radius: 10px;
     background-color: white;
     transform: translateY(5.7%) translateX(3.5%);
     display: grid;
