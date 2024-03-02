@@ -71,6 +71,14 @@ body {
     transform: translateX(168%) translateY(-5%);
 }
 
+#yellow-container p :hover {
+    color: rgb(120, 12, 192);
+}
+
+#yellow-container a {
+    color: black;
+}
+
 #slider-red {
     width: 1000px;
     height: 45px;
@@ -172,7 +180,7 @@ label[for="grid-color"] {
     font-size: 20px;
     color: black;
     text-align: center;
-    transform: translateX(62%) translateY(0%);
+    transform: translateX(62%) translateY(10%);
 }
 
 #pen-color {
