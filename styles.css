@@ -91,7 +91,7 @@ body {
     background-color: rgb(194, 165, 2);
     width: 100px;
     height: 45px;
-    cursor: move;
+    cursor:grab;
 }
 
 #slider-lyellow {
@@ -99,6 +99,7 @@ body {
     width: 30px;
     height: 45px;
     transform: translateX(120%);
+    cursor:grab;
 }
 
 .cell {
