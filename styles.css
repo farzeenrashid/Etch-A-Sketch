@@ -110,6 +110,12 @@ body {
     cursor: crosshair;
 }
 
+#grid-on-off {
+    transform: scale(3);
+    position: absolute;
+    cursor: pointer;
+}
+
 #shake-button {
     position: absolute;
     background-color: black;

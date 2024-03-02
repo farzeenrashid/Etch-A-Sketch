@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const canvasColorInput = document.querySelector('#canvas-color');
   const gridColorInput = document.querySelector('#grid-color');
   const sketchPad = document.querySelector('#sketch-pad');
+  const gridCheckbox = document.querySelector('#grid-on-off');
 
   let currentMode = 'pen'; 
   let isMouseDown = false;
@@ -35,8 +36,21 @@ document.addEventListener('DOMContentLoaded', function() {
   gridColorInput.addEventListener('input', function() {
     const cells = document.querySelectorAll(".cell");
     cells.forEach(function(cell) {
-      cell.style.borderColor = gridColorInput.value;;
+      cell.style.borderColor = gridColorInput.value;
     });
+  });
+
+  gridCheckbox.addEventListener('change', function() {
+    const cells = document.querySelectorAll(".cell");
+    if (this.checked) {
+      cells.forEach(function(cell) {
+        cell.style.borderStyle = "solid"; 
+      });
+    } else {
+      cells.forEach(function(cell) {
+        cell.style.borderStyle = "none";
+      });
+    }
   });
 
   eraserButton.addEventListener('click', function() {
