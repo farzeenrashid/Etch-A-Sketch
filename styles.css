@@ -284,15 +284,37 @@ label[for="pen-color"] {
 }
 
 @keyframes appear {
-    0% {opacity: 0;}
-    25% {opacity: 0;}
-    50% {opacity: 0;}
-    70% {opacity: 0;}
-    100% {opacity: 1;}
+    0% { opacity: 0; }
+    25% { opacity: 0; }
+    50% { opacity: 0; }
+    70% { opacity: 0; }
+    100% { opacity: 1; }
 }
 
 #title-lgreen, #title-lgreen p, #title-dgreen, #shake-button, #erase, #rainbow, 
 #warm, #cold, #pen-color, #canvas-color, #grid-color, 
 #grid-on-off, label, #eraser {
     animation: appear 3s ease-in-out;
+}
+
+#shake-button:hover {
+background-color: rgb(54, 54, 54);
+border-color: rgb(54, 54, 54);
+}
+
+#eraser:hover {
+    background-color: rgb(219, 219, 219);
+    border-color: rgb(219, 219, 219);
+}
+
+#cold:hover {
+    background-image: linear-gradient(to bottom right, rgb(32, 216, 216), rgb(26, 168, 211), rgb(59, 138, 211), rgb(22, 100, 216), rgb(26, 55, 216), rgb(2, 4, 145));
+}
+
+#warm:hover {
+    background-image: linear-gradient(to bottom right, rgb(163, 1, 1), rgb(214, 72, 53), rgb(194, 117, 1), rgb(209, 154, 1), rgb(199, 199, 1), rgb(199, 199, 1));
+}
+
+#rainbow:hover {
+    background-image: linear-gradient(to bottom right, rgb(204, 61, 61), rgb(204, 154, 62), rgb(209, 209, 93), rgb(97, 184, 97), rgb(77, 163, 189), rgb(160, 75, 194));
 }
